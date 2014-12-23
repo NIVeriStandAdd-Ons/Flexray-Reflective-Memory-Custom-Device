@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomDevice xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="Custom Device.xsd">
+<XSDVersion Major="2010" Minor="0" Fix="0" Build="0" />
+  <AddMenu>
+    <eng>XNET Reflective Memory</eng>
+    <loc>XNET Reflective Memory</loc>
+  </AddMenu>
+  <Version>1.0</Version>
+  <Type>Inline Timing and Sync</Type>
+  <MaxOccurrence>1</MaxOccurrence>
+  <MainPageGUID>ED3BC212-561D-6BFC-077C-45C4CFB04BE3</MainPageGUID>
+  <!-- Use the TimingSource section to indicate that your Custom Device can provide a timing source for the Primary Control Loop. -->
+  <TimingSource>
+    <HasTimingSourceCapability>true</HasTimingSourceCapability>
+    <Paths>
+      <Source>
+        <Type>To Common Doc Dir</Type>
+        <Path>Timing and Sync\XNET Reflective Memory\XNET Reflective Memory Engine.llb\XNET Reflective Memory Timing Source VI.vi</Path>
+      </Source>
+      <RealTimeSystemDestination>c:\ni-rt\VeriStand\Custom Devices\XNET Reflective Memory\XNET Reflective Memory Engine.llb\XNET Reflective Memory Timing Source VI.vi</RealTimeSystemDestination>
+    </Paths>
+  </TimingSource>
+  <InitializationVI>
+    <Type>Action</Type>
+    <Item2Launch>
+      <Type>To Common Doc Dir</Type>
+		<Path>Timing and Sync\XNET Reflective Memory\XNET Reflective Memory Configuration.llb\XNET Reflective Memory Initialization VI.vi</Path>
+    </Item2Launch>
+  </InitializationVI>
+  <CustomDeviceVI>
+		<SourceDistribution>
+			<Source>
+				<SupportedTarget>PharlapWindows</SupportedTarget>
+				<Source>
+					<Type>To Common Doc Dir</Type>
+					<Path>Timing and Sync\XNET Reflective Memory\XNET Reflective Memory Engine.llb\XNET Reflective Memory RT Driver VI.vi</Path>
+				</Source>
+				<RealTimeSystemDestination>c:\ni-rt\VeriStand\Custom Devices\XNET Reflective Memory\XNET Reflective Memory Engine.llb\XNET Reflective Memory RT Driver VI.vi</RealTimeSystemDestination>
+			</Source>
+		</SourceDistribution>
+	</CustomDeviceVI>
+  <Dependencies />
+  <Pages>
+    <Page>
+      <Name>
+        <eng>XNET Reflective Memory</eng>
+        <loc>XNET Reflective Memory</loc>
+      </Name>
+      <GUID>ED3BC212-561D-6BFC-077C-45C4CFB04BE3</GUID>
+      <Glyph>
+			<Type>To Application Data Dir</Type>
+			<Path>System Explorer\Glyphs\default fpga category.png</Path>
+		</Glyph>
+      <Item2Launch>
+        <Type>To Common Doc Dir</Type>
+		<Path>Timing and Sync\XNET Reflective Memory\XNET Reflective Memory Configuration.llb\XNET Reflective Memory Main Page.vi</Path>
+      </Item2Launch>
+	  <RunTimeMenu>
+        <MenuItem>
+          <GUID>b9203e22-4838-4b49-b35e-30db8f96b012</GUID>
+          <Type>Action</Type>
+          <Name>
+            <eng>Add Write Channel</eng>
+            <loc>Add Write Channel</loc>
+          </Name>
+          <Item2Launch>
+            <Type>To Common Doc Dir</Type>
+            <Path>Timing and Sync\XNET Reflective Memory\XNET Reflective Memory Configuration.llb\Add Write Channel - Right Click.vi</Path>
+          </Item2Launch>
+        </MenuItem>
+        <MenuItem>
+          <GUID>b9203e22-4838-4b49-b35e-30db8f96b023</GUID>
+          <Type>Action</Type>
+          <Name>
+            <eng>Add Read Channel</eng>
+            <loc>Add Read Channel</loc>
+          </Name>
+          <Item2Launch>
+            <Type>To Common Doc Dir</Type>
+            <Path>Timing and Sync\XNET Reflective Memory\XNET Reflective Memory Configuration.llb\Add Read Channel - Right Click.vi</Path>
+          </Item2Launch>
+        </MenuItem>
+		<MenuItem>
+			<GUID>03D3BE0A-1485-13A6-563AEB9BF271825A</GUID>
+			<Type>VI</Type>
+			<MinNrOfChilds>1</MinNrOfChilds>
+			<Name>
+				<eng>Delete Multiple Items</eng>
+				<loc>Delete Multiple Items</loc>
+			</Name>
+			<Item2Launch>
+				<Type>Absolute</Type>
+				<Path>Dialogs\Delete Multiple Items.vi</Path>
+			</Item2Launch>
+		</MenuItem>
+      </RunTimeMenu>
+		<ButtonList>
+			<Button>
+				<ID>AddWriteChan</ID>
+				<Glyph>
+					<Type>To Application Data Dir</Type>
+					<Path>System Explorer\Glyphs\Procedures.png</Path>
+				</Glyph>
+				<Type>Action</Type>
+				<ReferencedGUID>b9203e22-4838-4b49-b35e-30db8f96b012</ReferencedGUID>
+				<ButtonText>
+					<eng>Add Write Channel</eng>
+					<loc>Add Write Channel</loc>
+				</ButtonText>
+				<Caption>
+					<eng>Add Write Channel</eng>
+					<loc>Add Write Channel</loc>
+				</Caption>
+				<TipStrip>
+					<eng>Add Write Channel</eng>
+					<loc>Add Write Channel</loc>
+				</TipStrip>
+				<Documentation>
+					<eng>
+					</eng>
+					<loc>
+					</loc>
+				</Documentation>
+			</Button>
+			<Button>
+				<ID>AddReadChan</ID>
+				<Glyph>
+					<Type>To Application Data Dir</Type>
+					<Path>System Explorer\Glyphs\Procedures.png</Path>
+				</Glyph>
+				<Type>Action</Type>
+				<ReferencedGUID>b9203e22-4838-4b49-b35e-30db8f96b023</ReferencedGUID>
+				<ButtonText>
+					<eng>Add Read Channel</eng>
+					<loc>Add Read Channel</loc>
+				</ButtonText>
+				<Caption>
+					<eng>Add Read Channel</eng>
+					<loc>Add Read Channel</loc>
+				</Caption>
+				<TipStrip>
+					<eng>Add Read Channel</eng>
+					<loc>Add Read Channel</loc>
+				</TipStrip>
+				<Documentation>
+					<eng>
+					</eng>
+					<loc>
+					</loc>
+				</Documentation>
+			</Button>
+		</ButtonList>
+    </Page>
+    <Page>
+      <Name>
+        <eng>Channel Page</eng>
+        <loc>Channel Page</loc>
+      </Name>
+      <GUID>ED3BC212-561D-6BFC-077C-45C4CFB04B45</GUID>
+      <Glyph>
+			<Type>To Application Data Dir</Type>
+			<Path>System Explorer\Glyphs\default fpga channel.png</Path>
+		</Glyph>
+      <Item2Launch>
+        <Type>To Common Doc Dir</Type>
+		<Path>Timing and Sync\XNET Reflective Memory\XNET Reflective Memory Configuration.llb\XNET Reflective Memory Chan Page.vi</Path>
+      </Item2Launch>
+    </Page>
+    
+  </Pages>
+  <CustomXML>
+    <Dummy></Dummy>
+  </CustomXML>
+</CustomDevice>
